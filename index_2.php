@@ -105,9 +105,13 @@ $array_multidimention = [
 ];
 
 
+
+
+
 foreach($array_multidimention as $key=> $multidimention){
 
     if(is_array($multidimention)){
+
         foreach($multidimention as $key=> $value){
             echo $key . ' '. $value.'</br>';
         }
@@ -120,13 +124,27 @@ foreach($array_multidimention as $key=> $multidimention){
 }
 
 
+for($str=1; $str<=10; $str++){
+    echo '2x'. $str . "=". 2*$str .'</br>';
+};
 
 
 
 
+for($strr=1; $strr<=50; $strr++){
+    if($strr%2 == 0){
+        echo 'this number is even:' . $strr. '</br>';
+    }
+        
+    
+};
 
 
+//not check data type;
+$x = "";  
+$y = 100;
 
+var_dump($x == $y); 
 
 
 
