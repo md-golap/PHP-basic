@@ -132,7 +132,7 @@ for($str=1; $str<=10; $str++){
 
 
 for($strr=1; $strr<=50; $strr++){
-    if($strr%2 == 0){
+    if($strr%2 != 0){
         echo 'this number is even:' . $strr. '</br>';
     }
         
@@ -145,6 +145,37 @@ $x = "";
 $y = 100;
 
 var_dump($x == $y); 
+
+echo '</br>';
+
+$array = [12,54,54,33,76,98,9,432];
+
+$sum = 0;
+foreach($array as $value){
+    $sum +=$value;
+
+}
+echo $sum;
+
+
+echo '</br>';
+echo array_sum($array);
+
+
+
+$array =[44,53,44,66,90,66];
+
+$unique =array_unique($array);
+print_r($unique);
+
+
+
+
+
+
+
+
+
 
 
 
