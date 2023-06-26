@@ -1,4 +1,23 @@
+<?php
+       if(isset($_POST["form-submit"])){
 
+        echo "bangla";
+
+
+       }
+
+
+
+
+
+
+
+
+
+
+
+
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,22 +36,12 @@
         <input type="email" name="email" class="form-control" required autofocus>
         <label for="inputPassword">Password</label>
         <input type="password"  name="password" class="form-control" required>
-        <button class="btn btn-lg btn-primary btn-block d-grid gap-2 col-12 mx-auto" type="submit">sign in</button>
+        <button name="form-submit" class="form-submit btn btn-lg btn-primary btn-block d-grid gap-2 col-12 mx-auto">sign in</button>
         <p class="mt-5 mb-3 text-muted">&copy; 2023</p>
 
     </form>
 
    
-    <?php
-        if(isset($_POST['email'])){
-            echo 'My email address is:' . $_POST['email'];
-
-            echo '</br>';
-
-            echo 'My password is:' . $_POST['password'];
-        }
-    
-    
-    ?>
+   
 </body>
 </html>

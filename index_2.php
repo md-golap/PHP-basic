@@ -172,7 +172,39 @@ print_r($unique);
 
 
 
+<?php
+    if(isset($_POST["form-submit"])){
+        $name = $_POST['name'];
+        $email = $_POST['email'];
+        if(empty($name) || empty($email)){
+            echo "empty field not allow";
+        }
 
+        if(filter_var($email, FILTER_VALIDATE_EMAIL)){
+            echo "valid email";
+        }else{
+            echo "invalid email";
+        }
+    }
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validation</title>
+</head>
+<body>
+    <h2>basic form</h2>
+    <form method="post">
+        <label for="name">Name</label>
+        <input type="text" name="name" placeholder="Enter your name"/>
+        <label for="email">Email</label>
+        <input type="text" name="email" placeholder="Enter your Email"/>
+        <button type="submit" name="form-submit">Submit</button>
+    </form>
+</body>
+</html>
 
 
 
